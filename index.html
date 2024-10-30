@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Grasping Force Estimation in Markerless Visuo-Tactile Sensors">
+  <meta property="og:title" content="Grasping Force Estimation in Markerless Visuo-Tactile Sensors"/>
+  <meta property="og:description" content="Grasping Force Estimation in Markerless Visuo-Tactile Sensors"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/EKFdiagramICINCO.png" />
+  <meta property="og:image:width" content="856"/>
+  <meta property="og:image:height" content="515"/>
+
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Target Tracking, Autonomous Vehicles, Robot Sensing Systems, Real-Time Systems">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Grasping Force Estimation in Markerless Visuo-Tactile Sensors</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+          <img src="static/images/logoAUROVAg.png" alt="Logo AUROVA" class="left"  width="25%"/>
+          <img src="static/images/logo-ua.jpg" alt="Logo UA" class="right"  width="25%"/>
+  </div>
+  </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Grasping Force Estimation in Markerless Visuo-Tactile Sensors</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Julio Castaño-Amorós,
+              </span>
+              <span class="author-block">
+                Pablo Gil,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Group of Automation, Robotics and Computer Vision (AUROVA)<br>University of Alicante</span>
+            </div>
+
+            <div class="is-size-8 publication-authors">
+              <span class="author-block"><a href="mailto:julio.ca@ua.es" target="_blank">julio.ca@ua.es</a></span>
+              <span class="author-block"><a href="mailto:pablo.gil@ua.es" target="_blank">pablo.gil@ua.es</a></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                    <!-- Paper link -->
+                <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (soon)</span>
+                </a>
+              </span>
+              
+              <div class="column has-text-centered">
+              <div class="publication-links">
+                    <!-- Paper link -->
+                <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              
+               <span class="link-block">
+                  <a href="https://drive.google.com/file/d/1PawPChehDrno9N-2y3GUPzb6A2acdLBl/view?usp=sharing" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+            <!-- Github link -->
+            <span class="link-block">
+              <a href="https://github.com/AUROVA-LAB/applications/tree/main/app_force_estimation" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Examples</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/Follow1_alltrackers.gif"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/Follow2_alltrackers.gif"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+<!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Examples of grasping force estimation</h2>
+          
+          <div class="publication-video">
+            <!-- Youtube embed code here -->
+            <iframe src="https://www.youtube.com/embed/4n441Vaq704" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+           Tactile sensors have been used for force estimation in the past, especially Vision-Based Tactile Sensors (VBTS) have recently become a new trend due to their high spatial resolution and low cost. In this work, we have designed and implemented several approaches to estimate the normal grasping force using different types of markerless visuotactile representations obtained from VBTS. Our main goal is to determine the most appropriate visuotactile representation, based on a performance analysis during robotic grasping tasks. Our proposal has been tested on the dataset generated with our DIGIT sensors and another one obtained using GelSight Mini sensors from another state-of-the-art work. We have also tested the generalization capabilities of our best approach, called RGBmod. The results led to two main conclusions. First,
+the RGB visuotactile representation is a better input option than the depth image or a combination of the two for estimating normal grasping forces. Second, RGBmod achieved a good performance when tested on 10 unseen everyday objects in real-world scenarios, achieving an average relative error of 0.125 ± 0.153. Furthermore, we show that our proposal outperforms other works in the literature that use RGB and depth information for the same task.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+        <img src="static/images/esquema.png" alt="" class="center" width="60%" height=auto/>
+        <h2 class="subtitle has-text-centered">
+          Diagram of our grasping force estimation method.
+        </h2>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+<!--@conference{olivas2023robust,
+  author={Alejandro Olivas. and Miguel Muñoz{-}Bañón. and Edison Velasco. and Fernando Torres.},
+  title={Robust Single Object Tracking and Following by Fusion Strategy},
+  booktitle={Proceedings of the 20th International Conference on Informatics in Control, Automation and Robotics - Volume 1: ICINCO},
+  year={2023},
+  pages={624-631},
+  publisher={SciTePress},
+  organization={INSTICC},
+  doi={10.5220/0012178900003543},
+  isbn={978-989-758-670-5},
+  issn={2184-2809},
+}-->
+    </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
