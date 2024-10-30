@@ -21,7 +21,8 @@ Segmentation of Grasping Region"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Grasping Force Estimation in Markerless Visuo-Tactile Sensors</title>
+  <title>Measuring Object Rotation via Visuo-Tactile
+Segmentation of Grasping Region</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -58,7 +59,8 @@ Segmentation of Grasping Region"/>
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Grasping Force Estimation in Markerless Visuo-Tactile Sensors</h1>
+            <h1 class="title is-1 publication-title">Measuring Object Rotation via Visuo-Tactile
+Segmentation of Grasping Region</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -82,20 +84,20 @@ Segmentation of Grasping Region"/>
               <div class="publication-links">
                     <!-- Paper link -->
                 <span class="link-block">
-                  <a href="" target="_blank"
+                  <a href="https://ieeexplore.ieee.org/document/10149493" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper (soon)</span>
+                  <span>Paper</span>
                 </a>
               </span>
               
               <div class="column has-text-centered">
               <div class="publication-links">
-                    <!-- Paper link -->
+                    <!-- arXiv link -->
                 <span class="link-block">
-                  <a href="" target="_blank"
+                  <a href="https://arxiv.org/abs/2401.09831" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -105,7 +107,7 @@ Segmentation of Grasping Region"/>
               </span>
               
                <span class="link-block">
-                  <a href="https://drive.google.com/file/d/1PawPChehDrno9N-2y3GUPzb6A2acdLBl/view?usp=sharing" target="_blank"
+                  <a href="https://github.com/AUROVA-LAB/aurova_grasping/tree/main/Tactile_sensing/Digit_sensor/Tactile_segmentation/dataset" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-database"></i>
@@ -116,12 +118,12 @@ Segmentation of Grasping Region"/>
 
             <!-- Github link -->
             <span class="link-block">
-              <a href="https://github.com/AUROVA-LAB/applications/tree/main/app_force_estimation" target="_blank"
+              <a href="" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fab fa-github"></i>
                 </span>
-                <span>Code</span>
+                <span>Code (soon)</span>
               </a>
             </span>
 
@@ -184,7 +186,7 @@ Segmentation of Grasping Region"/>
           
           <div class="publication-video">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/4n441Vaq704" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Cov-WgFn6rE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -203,8 +205,10 @@ Segmentation of Grasping Region"/>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-           Tactile sensors have been used for force estimation in the past, especially Vision-Based Tactile Sensors (VBTS) have recently become a new trend due to their high spatial resolution and low cost. In this work, we have designed and implemented several approaches to estimate the normal grasping force using different types of markerless visuotactile representations obtained from VBTS. Our main goal is to determine the most appropriate visuotactile representation, based on a performance analysis during robotic grasping tasks. Our proposal has been tested on the dataset generated with our DIGIT sensors and another one obtained using GelSight Mini sensors from another state-of-the-art work. We have also tested the generalization capabilities of our best approach, called RGBmod. The results led to two main conclusions. First,
-the RGB visuotactile representation is a better input option than the depth image or a combination of the two for estimating normal grasping forces. Second, RGBmod achieved a good performance when tested on 10 unseen everyday objects in real-world scenarios, achieving an average relative error of 0.125 ± 0.153. Furthermore, we show that our proposal outperforms other works in the literature that use RGB and depth information for the same task.
+           When carrying out robotic manipulation tasks, objects occasionally fall as a result of the rotation caused by slippage. This can be prevented by obtaining tactile information
+that provides better knowledge on the physical properties of the grasping. In this paper, we estimate the rotation angle of a grasped object when slippage occurs. We implement a system
+made up of a neural network with which to segment the contact region and an algorithm with which to estimate the rotated angle of that region. This method is applied to DIGIT tactile sensors. Our system has additionally been trained and tested with our publicly available dataset which is, to the best of our knowledge, the first dataset related to tactile segmentation from non-synthetic images to appear in the literature, and with which we have attained results of 95% and 90% as regards Dice and IoU metrics in the worst scenario. Moreover, we have obtained a maximum error of ≈ 3º when testing with objects not previously seen by our system in 45 different lifts. This, therefore, proved that our approach is able to detect the slippage movement, thus
+providing a possible reaction that will prevent the object from falling.
           </p>
         </div>
       </div>
@@ -217,9 +221,9 @@ the RGB visuotactile representation is a better input option than the depth imag
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-        <img src="static/images/esquema.png" alt="" class="center" width="60%" height=auto/>
+        <img src="static/images/01_method.png" alt="" class="center" width="40%" height=auto/>
         <h2 class="subtitle has-text-centered">
-          Diagram of our grasping force estimation method.
+          Scheme of our system combining both stages.
         </h2>
 </div>
 </div>
@@ -249,18 +253,16 @@ the RGB visuotactile representation is a better input option than the depth imag
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-<!--@conference{olivas2023robust,
-  author={Alejandro Olivas. and Miguel Muñoz{-}Bañón. and Edison Velasco. and Fernando Torres.},
-  title={Robust Single Object Tracking and Following by Fusion Strategy},
-  booktitle={Proceedings of the 20th International Conference on Informatics in Control, Automation and Robotics - Volume 1: ICINCO},
+@ARTICLE{10149493,
+  author={Castaño-Amorós, Julio and Gil, Pablo},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Measuring Object Rotation via Visuo-Tactile Segmentation of Grasping Region}, 
   year={2023},
-  pages={624-631},
-  publisher={SciTePress},
-  organization={INSTICC},
-  doi={10.5220/0012178900003543},
-  isbn={978-989-758-670-5},
-  issn={2184-2809},
-}-->
+  volume={8},
+  number={8},
+  pages={4537-4544},
+  keywords={Image segmentation;Grasping;Task analysis;Estimation;Tactile sensors;Neural networks;Proposals;Grasping;force and tactile sensing;perception for grasping and manipulation},
+  doi={10.1109/LRA.2023.3285471}}
     </code></pre>
     </div>
 </section>
